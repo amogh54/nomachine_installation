@@ -17,7 +17,7 @@
           var: os_status
 
       - name: Copy DJV
-        copy: src=/ASEX/share/vipul.meher/DJV-1.3.0-1.x86_64.rpm dest=/srv/local mode=777
+        copy: src= ./soft/DJV-1.3.0-1.x86_64.rpm dest=/srv/local mode=777
         when: os_status.stdout == "CentOS Linux release 7.7.1908 (Core)" or  os_status.stdout == "CentOS Linux release 7.9.2009 (Core)"
         
       - name: INSTALL DJV

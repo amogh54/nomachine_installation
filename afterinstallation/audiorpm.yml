@@ -18,7 +18,7 @@
         var: os_status
 
     - name: Install Audio rpm
-      shell: rpm -ivh /ASE/08_rnd/audiofile-0.3.6-4.el7.x86_64.rpm
+      shell: rpm -ivh ./soft/audiofile-0.3.6-4.el7.x86_64.rpm
       when: audio_status.stdout == "" and os_status.stdout == "CentOS Linux release 7.7.1908 (Core)" or audio_status.stdout == "" and os_status.stdout == "CentOS Linux release 7.9.2009 (Core)"
 
     - name: Check audiofile-devel
